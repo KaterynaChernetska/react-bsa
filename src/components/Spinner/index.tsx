@@ -1,7 +1,8 @@
 import "./spinner.scss";
-import React from "react";
+import { FC } from "react";
 
-export const Spinner: React.FC = () => (
+
+export const Spinner: FC = () => (
   <div className="pos-center">
     <div className="loader"></div>
   </div>

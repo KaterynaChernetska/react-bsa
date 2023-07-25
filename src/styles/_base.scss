@@ -1,5 +1,21 @@
 @use "./vars" as vars;
 
+:focus,
+:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 2px vars.$color-blue-300;
+}
+
+:focus:not(:focus-visible) {
+  outline: 0;
+  box-shadow: none;
+}
+
+::selection {
+  color: vars.$color-white;
+  background-color: vars.$color-blue-200;
+}
+
 *,
 *::before,
 *::after {
@@ -11,11 +27,6 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-}
-
-#root {
   display: flex;
   flex-direction: column;
   min-width: 320px;
@@ -23,11 +34,13 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-size: vars.$font-size-m;
+  color: vars.$color-blue-400;
+  font-size: vars(--font-size-200);
   font-family: Assistant, sans-serif;
   font-style: normal;
   line-height: 1.5;
-  background-color: vars.$white;
+  text-rendering: optimizespeed;
+  background-color: vars.$color-white;
 }
 
 main {

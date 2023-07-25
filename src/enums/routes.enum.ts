@@ -1,4 +1,4 @@
-enum Routes {
+enum PageRoutes {
   Index = "/",
   SignUp = "/sign-up",
   SignIn = "/sign-in",
@@ -8,4 +8,4 @@ enum Routes {
   Unknown = "*",
 }
 
-export { Routes };
+export { PageRoutes };

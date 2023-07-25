@@ -1,11 +1,16 @@
-$white: #FFFFFF;
-$blue-light: #EEF8FB;
-$blue-dark: #96DAEF;
-$footer-dark: #242A3A;
-$black: #000000;
-$font-size-xs: 14px;
-$font-size-s: 16px;
-$font-size-m: 18px;
-$font-size-l: 24px;
-$font-size-xl: 32px;
-$font-size-xxl: 36px;
+
+$color-white: #ffffff;
+$color-blue-100: #eef8fb;
+$color-blue-200: #96daf0;
+$color-blue-300: #7cbcde;
+$color-blue-400: #242a3a;
+$color-gray: #e1e1e1;
+$overlay-color: rgb(0 0 0 / 30%);
+$shadow: -1px 4px 74px -16px rgb(0 0 0 / 15%);
+$font-size-100: 14px;
+$font-size-200: 16px;
+$font-size-300: 18px;
+$font-size-400: 24px;
+$font-size-500: 32px;
+$font-size-600: 36px;
+$container-width: 1000px;
