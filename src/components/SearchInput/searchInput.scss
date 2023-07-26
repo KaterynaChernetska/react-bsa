@@ -1,0 +1,27 @@
+@use "../../styles/vars" as vars;
+
+.trips-filter__search {
+  width: 100%;
+  max-width: 350px;
+}
+
+.input input {
+  min-width: 160px;
+  min-height: 45px;
+  padding: 10px 15px;
+  font-size: vars.$font-size-300;
+  background-color: vars.$color-blue-100;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  appearance: none;
+}
+
+.trips-filter__search input {
+  padding-left: 50px;
+  background-color: vars.$color-white;
+  background-image: url("../../assets/search.svg");
+  background-repeat: no-repeat;
+  background-position: 15px 50%;
+  background-size: 22px;
+}
