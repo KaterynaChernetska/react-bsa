@@ -7,9 +7,7 @@ export const Layout: FC = () => {
   return (
     <>
       <Header />
-      <main>
-        <Outlet />
-      </main>
+      <Outlet />
       <Footer />
     </>
   );

@@ -22,18 +22,3 @@
   font-family: "Playfair Display", serif;
   text-decoration: none;
 }
-.button {
-    display: block;
-    width: 100%;
-    min-height: 45px;
-    padding: 10px 15px;
-    color: vars.$color-white;
-    font-size: vars.$font-size-200;
-    text-align: center;
-    text-decoration: none;
-    background-color: vars.$color-blue-200;
-    border: none;
-    border-radius: 1px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
