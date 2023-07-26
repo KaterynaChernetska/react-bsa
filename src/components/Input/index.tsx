@@ -9,7 +9,8 @@ interface InputProps {
   heading: string;
   autoComplete?: string;
   value: string;
-  onChange?: (value: string) => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  onChange?: (value: any) => void;
   min?: string;
   max?: string;
 }
