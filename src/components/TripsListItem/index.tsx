@@ -1,5 +1,5 @@
 import { FC } from "react";
-import './tripsListItem.scss';
+import "./tripsListItem.scss";
 import { Link } from "react-router-dom";
 import { PageRoutes } from "../../enums/routes.enum";
 
@@ -23,7 +23,7 @@ export const TripsListItem: FC<TripItemProps> = ({
   return (
     <li data-test-id="trip-card" className="trip-card">
       <img
-      className="image"
+        className="image"
         data-test-id="trip-card-image"
         src={image}
         alt={title}
@@ -55,7 +55,11 @@ export const TripsListItem: FC<TripItemProps> = ({
           </strong>
         </div>
       </div>
-      <Link data-test-id="trip-card-link" to={`${PageRoutes.Trip}/${id}`} className="button">
+      <Link
+        data-test-id="trip-card-link"
+        to={`${PageRoutes.Trip}/${id}`}
+        className="button"
+      >
         Discover a trip
       </Link>
     </li>
