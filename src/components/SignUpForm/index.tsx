@@ -1,11 +1,12 @@
 import { FC, FormEvent, useState } from "react";
 import { Input } from "../Input";
-import "./signInForm.scss";
+import "./signUpForm.scss";
 import { useNavigate } from "react-router-dom";
 import { PageRoutes } from "../../enums/routes.enum";
 
-export const SignInForm: FC = () => {
+export const SignUpForm: FC = () => {
   const navigate = useNavigate();
+  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,6 +14,12 @@ export const SignInForm: FC = () => {
     event: React.ChangeEvent<HTMLInputElement>
   ): void => {
     setEmail(event.target.value);
+  };
+
+  const onFullNameChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    setFullName(event.target.value);
   };
 
   const onPasswordInputChange = (
@@ -27,6 +34,7 @@ export const SignInForm: FC = () => {
       alert(
         "Password must contain at least 3 characters and a maximum of 20 characters"
       );
+    setFullName("");
     setEmail("");
     setPassword("");
 
@@ -34,12 +42,20 @@ export const SignInForm: FC = () => {
   };
   return (
     <form
-      className="sign-in-form"
-      autoComplete="off"
+      className="sign-up-form"
       onSubmit={handleFormSubmit}
+      autoComplete="off"
     >
-      <h2 className="sign-in-form__title">Sign In</h2>
-
+      <h2 className="sign-up-form__title">Sign Up</h2>
+      <Input
+        heading={"Full name"}
+        testId={"auth-full-name"}
+        name={"full-name"}
+        type={"text"}
+        required={true}
+        value={fullName}
+        onChange={onFullNameChange}
+      />
       <Input
         heading={"Email"}
         testId={"auth-email"}
@@ -55,11 +71,12 @@ export const SignInForm: FC = () => {
         type={"password"}
         heading={"Password"}
         value={password}
+        autoComplete="new-password"
         onChange={onPasswordInputChange}
         required={true}
       />
       <button data-test-id="auth-submit" className="button" type="submit">
-        Sign In
+        Sign Up
       </button>
     </form>
   );
