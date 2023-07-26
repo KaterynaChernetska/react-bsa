@@ -23,10 +23,11 @@ export const SignInForm: FC = () => {
 
   const handleFormSubmit = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
-    if (password.length < 3 || password.length > 20)
-      alert(
+    if (password.length < 3 || password.length > 20) {
+      return alert(
         "Password must contain at least 3 characters and a maximum of 20 characters"
       );
+    }
     setEmail("");
     setPassword("");
 

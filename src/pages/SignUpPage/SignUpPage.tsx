@@ -16,7 +16,7 @@ const SignUpPage: FC = () => {
           to={PageRoutes.SignIn}
           className="sign-up-form__link"
         >
-          Sign Up
+          Sign In
         </Link>
       </span>
     </main>
