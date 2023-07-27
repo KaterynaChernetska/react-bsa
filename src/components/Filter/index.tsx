@@ -59,7 +59,6 @@ export const Filter: FC<TripFilterProps> = ({ onFilter }) => {
         <label className="select">
           <span className="visually-hidden">Search by level</span>
           <select
-            // value={level}
             data-test-id="filter-level"
             name="level"
             onChange={handleLevelChange}

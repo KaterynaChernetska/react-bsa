@@ -1,0 +1,8 @@
+@use "../../styles/vars" as vars;
+
+.trip-price__value {
+    display: block;
+    color: vars.$color-blue-200;
+    font-size: vars.$font-size-600;
+    line-height: 1;
+  }
