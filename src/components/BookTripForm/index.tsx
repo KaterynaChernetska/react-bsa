@@ -23,7 +23,6 @@ export const BookTripForm: FC<BookTripFormProps> = ({
 }) => {
   const [date, setDate] = useState("");
   const [people, setPeople] = useState("1");
-
   const onNumberOfGuestsChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -43,9 +42,9 @@ export const BookTripForm: FC<BookTripFormProps> = ({
     if (event.target.value < tomorrowFormatted) {
       return alert("Please select valid date");
     }
+
     setDate(event.target.value);
   };
-
   const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     onClose();
