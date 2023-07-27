@@ -1,0 +1,18 @@
+@use "../../styles/vars" as vars;
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 340px;
+  margin-bottom: 30px;
+}
+
+.sign-up-form__title {
+  margin: 0 0 20px;
+  font-size: vars.$font-size-400;
+  text-align: center;
+}
+
+

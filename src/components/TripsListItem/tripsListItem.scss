@@ -1,0 +1,55 @@
+@use "../../styles/vars" as vars;
+
+.trip-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  background-color: vars.$color-white;
+  border-radius: 1px;
+  box-shadow: vars.$shadow;
+}
+
+.trip-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 30px;
+}
+
+.trip-info {
+  width: 100%;
+  max-width: 300px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid vars.$color-gray;
+}
+
+.trip-info__title {
+  margin: 0 0 5px;
+  font-weight: 600;
+  font-size: vars.$font-size-400;
+  font-family: "Playfair Display", serif;
+}
+
+.trip-info__content {
+  display: flex;
+  font-weight: 300;
+}
+
+.trip-info__duration {
+  min-width: 120px;
+  padding-left: 25px;
+  background-image: url("../../assets/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 15px;
+}
+
+.trip-info__level::before {
+  content: "•";
+  margin-right: 10px;
+  color: vars.$color-blue-200;
+}
+
+.image {
+  min-height: 210px;
+}
