@@ -1,3 +1,5 @@
+import { createNewBooking } from "../../helpers/createNewBooking";
+import { createBooking } from "../../services/bookings";
 import { Input } from "../Input";
 import { TripInfo } from "../TripInfo";
 import { FC, FormEvent, useState } from "react";
@@ -7,6 +9,7 @@ interface BookTripFormProps {
   duration: number;
   level: string;
   price: number;
+  tripId: string;
   onClose: () => void;
 }
 
@@ -15,11 +18,11 @@ export const BookTripForm: FC<BookTripFormProps> = ({
   duration,
   level,
   price,
+  tripId,
   onClose,
 }) => {
   const [date, setDate] = useState("");
   const [people, setPeople] = useState("1");
-
   const onNumberOfGuestsChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -39,12 +42,14 @@ export const BookTripForm: FC<BookTripFormProps> = ({
     if (event.target.value < tomorrowFormatted) {
       return alert("Please select valid date");
     }
+
     setDate(event.target.value);
   };
-
   const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event?.preventDefault();
+    event.preventDefault();
     onClose();
+    const newBooking = createNewBooking(tripId, people, date);
+    createBooking(newBooking);
   };
 
   return (

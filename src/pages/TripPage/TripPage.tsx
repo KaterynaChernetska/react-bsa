@@ -11,7 +11,6 @@ import { Modal } from "../../components/Modal";
 const TripPage: FC = () => {
   const { tripId } = useParams();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  console.log(isModalOpen)
 
   const handleModalOpen = () => {
     setIsModalOpen(true);
@@ -62,7 +61,7 @@ const TripPage: FC = () => {
       {isModalOpen && (
         <Modal
           onClose={onClose}
-        //   isModalOpen={isModalOpen}
+          tripId={tripId}
           title={title}
           price={price}
           duration={duration}

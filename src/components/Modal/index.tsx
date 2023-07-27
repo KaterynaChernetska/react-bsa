@@ -8,6 +8,7 @@ interface ModalProps {
   duration: number;
   level: string;
   price: number;
+  tripId: string;
   onClose: () => void;
 }
 const modalRoot = document.querySelector("#modal-root") as HTMLDivElement;
@@ -17,6 +18,7 @@ export const Modal: FC<ModalProps> = ({
   price,
   duration,
   level,
+  tripId,
   onClose,
 }) => {
   useEffect(() => {
@@ -46,11 +48,12 @@ export const Modal: FC<ModalProps> = ({
             ×
           </button>
           <BookTripForm
-          onClose={onClose}
+            onClose={onClose}
             title={title}
             duration={duration}
             level={level}
             price={price}
+            tripId={tripId}
           />
         </div>
       </div>
