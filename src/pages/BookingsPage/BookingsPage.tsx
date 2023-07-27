@@ -21,10 +21,14 @@ const BookingsPage: FC = () => {
   return (
     <main className="bookings-page">
       <h1 className="visually-hidden">Travel App</h1>
-      <BookingsList
-        bookings={bookings}
-        handleDeleteButtonClick={handleDeleteButtonClick}
-      />
+      {bookings.length > 0 ? (
+        <BookingsList
+          bookings={bookings}
+          handleDeleteButtonClick={handleDeleteButtonClick}
+        />
+      ) : (
+        <p>You have no bookings yet</p>
+      )}
     </main>
   );
 };
