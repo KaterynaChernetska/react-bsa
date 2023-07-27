@@ -7,7 +7,6 @@ interface TripsListProps {
 }
 
 export const TripsList: FC<TripsListProps> = ({ filteredTrips }) => {
-  console.log(filteredTrips);
 
   return (
     <section className="trips">

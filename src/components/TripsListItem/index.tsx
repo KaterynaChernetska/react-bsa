@@ -2,6 +2,9 @@ import { FC } from "react";
 import "./tripsListItem.scss";
 import { Link } from "react-router-dom";
 import { PageRoutes } from "../../enums/routes.enum";
+import { ImageComponent } from "../TripImage";
+import { TripInfo } from "../TripInfo";
+import TripPrice from "../TripPrice";
 
 export interface TripItemProps {
   id: string;
@@ -22,38 +25,20 @@ export const TripsListItem: FC<TripItemProps> = ({
 }) => {
   return (
     <li data-test-id="trip-card" className="trip-card">
-      <img
+      <ImageComponent
         className="image"
         data-test-id="trip-card-image"
         src={image}
-        alt={title}
+        alt={`${title} photo`}
       />
       <div className="trip-card__content">
-        <div className="trip-info">
-          <h3 data-test-id="trip-card-title" className="trip-info__title">
-            {title}
-          </h3>
-          <div className="trip-info__content">
-            <span
-              data-test-id="trip-card-duration"
-              className="trip-info__duration"
-            >
-              <strong>{duration}</strong> days
-            </span>
-            <span data-test-id="trip-card-level" className="trip-info__level">
-              {level}
-            </span>
-          </div>
-        </div>
-        <div className="trip-price">
-          <span>Price</span>
-          <strong
-            data-test-id="trip-card-price-value"
-            className="trip-price__value"
-          >
-            {price} $
-          </strong>
-        </div>
+        <TripInfo
+          title={title}
+          duration={duration}
+          level={level}
+          container="card"
+        />
+        <TripPrice price={price} container="card" />
       </div>
       <Link
         data-test-id="trip-card-link"

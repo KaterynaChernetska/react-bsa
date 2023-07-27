@@ -8,11 +8,6 @@ import {
 } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { Spinner } from "./components/Spinner";
-// import MainPage from "./pages/MainPage/MainPage";
-// import BookingsPage from "./pages/BookingsPage/BookingsPage";
-// import SignUpPage from "./pages/SignUpPage/SignUpPage";
-// import SignInPage from "./pages/SignInPage/SignInPage";
-// import TripPage from "./pages/TripPage/TripPage";
 
 const MainPage = lazy(() => import("./pages/MainPage/MainPage"));
 const BookingsPage = lazy(() => import("./pages/BookingsPage/BookingsPage"));

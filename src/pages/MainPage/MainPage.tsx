@@ -16,18 +16,17 @@ const MainPage: FC = () => {
     level: string
   ) => {
     const trips = allTrips.filter((trip) => {
-      const matchSearch = trip.title
-        .toLowerCase()
-        .includes(searchQuery.toLowerCase());
+      const matchSearch =
+        trip.title.toLowerCase().search(searchQuery.toLowerCase()) !== -1;
 
       let matchDuration = null;
 
       switch (duration) {
         case "0_x_5":
-          matchDuration = trip.duration < 5;
+          matchDuration = trip.duration <= 5;
           break;
         case "5_x_10":
-          matchDuration = trip.duration < 10;
+          matchDuration = trip.duration >= 5 && trip.duration < 10;
           break;
         case "10_x":
           matchDuration = trip.duration >= 10;
